@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createh2(){
+            var h2Ref = document.createElement("h2");
+
+            var btnRef = document.createElement("button");
+            var pRef = document.createElement("p");
+            h2Ref.style.backgroundcolor = "black";
+            h2Ref.style.color = "White";
+            h2Ref.style.padding = "30px";
+            h2Ref.style.width = "500px";
+            btnRef.innerText = "Delete";
+            btnRef.onclick = function(){
+                h2Ref.remove();
+                btnRef.remove();
+
+            };
+            var bodyRef = document.getElementById("body");
+            bodyRef.aappendChild(h2Ref);
+            bodyRef.aappendChild(pRef);
+
+            bodyRef.aappendChild(btnRef);
+
+            
+
+        }
+    </script>
+</head>
+<body  id="body">
+    <h1>
+        creating h2 element using javascript
+    </h1>
+    <p>...
+    </p>
+    <button onclick="createh2()">create h2</button>
+</body>
+</html>
